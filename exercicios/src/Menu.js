@@ -7,8 +7,17 @@ import Contador from './components/Contador';
 import ValidarProps from './components/ValidarProps';
 import Evento from './components/Evento';
 import { Avo } from './components/ComunicacaoDireta';
+import ListaFlex from './components/ListaFlex';
+import Flex from './components/Flex';
 
 export default createDrawerNavigator({
+    Flex: {
+        screen: Flex
+    },
+    ListaFlex:{
+        screen: ListaFlex,
+        navigationOptions: { title: 'Lista Flex'}
+    },
     Avo:{
         screen: () => <Avo nome='Joao' sobrenome='Silva' />
     },

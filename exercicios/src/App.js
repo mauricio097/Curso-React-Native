@@ -4,7 +4,7 @@ import Simples from './components/Simples';
 import ParImpar from './components/Parimpar';
 import { Inverter, MegaSena } from './components/Multi';
 
-export default class App extends Component {
+export default class App extends Component{
 	render() {
 		return (
 			<View style={styles.container}>
