@@ -76,7 +76,7 @@ export default class Agenda extends Component {
     componentDidMount = async () => {
         const data = await AsyncStorage.getItem('tasks');
         const tasks = JSON.parse(data) || [];
-        this.setState({tasks},this.filterTasks());
+        this.setState({tasks},this.filterTasks);
         
     }
     
