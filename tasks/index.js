@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import Agenda from './src/screens/Agenda';
+import Navigator from './src/Navigator';
 
-AppRegistry.registerComponent('tasks', () => Agenda);
+AppRegistry.registerComponent('tasks', () => Navigator);
