@@ -6,6 +6,7 @@ import {
     ImageBackground,
     TouchableOpacity,
     Alert,
+    AsyncStorage
 } from 'react-native';
 import commonStyles from '../commonStyles';
 import backgroundImage from '../../assets/imgs/login.png';
@@ -25,16 +26,18 @@ export default class Auth extends Component {
 
     signin = async () => {
         try{
+            
             const res = await axios.post(`${server}/signin`,{
                 email: this.state.email,
                 password: this.state.password
             });
 
             axios.defaults.headers.common['Authorization'] = `bearer ${res.data.token}`;
+            AsyncStorage.setItem('userData', JSON.stringify(res.data));
 
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('Home',res.data);
         } catch(err){
-            Alert.alert('Erro', 'Falha no Login!');
+            Alert.alert('Erro','Falha no Login!');
         }
     }
 

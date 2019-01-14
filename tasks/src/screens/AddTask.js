@@ -18,17 +18,19 @@ import commonStyles from '../commonStyles';
 
 export default class AddTask extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = this.getInitialState()
-    };
-
     getInitialState = () => {
         return {
             desc: '',
             date: new Date()
         }
     };
+
+    constructor(props){
+        super(props);
+        this.state = this.getInitialState();
+    };
+
+    
 
     save = () => {
         if(!this.state.desc.trim()){
@@ -71,7 +73,7 @@ export default class AddTask extends Component {
             <Modal onRequestClose={this.props.onCancel}
                 visible={this.props.isVisible}
                 animationType='slide' transparent={true}
-                onShow={() => this.setState({ ...this.UNSAFE_componentWillMount.getInitialState() })}>
+                onShow={() => this.setState({ ...this.getInitialState() })}>
                 <TouchableWithoutFeedback onPress={this.props.onCancel}>
                     <View style={styles.offset}></View>
                 </TouchableWithoutFeedback>

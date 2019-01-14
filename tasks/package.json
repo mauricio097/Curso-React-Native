@@ -15,8 +15,9 @@
     "react-native": "0.55.4",
     "react-native-action-button": "^2.8.5",
     "react-native-fa-icons": "^4.1.0",
+    "react-native-gravatar": "^1.0.2",
     "react-native-swipeable": "^0.6.0",
-    "react-navigation": "^3.0.9"
+    "react-navigation": "^2.14.2"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
